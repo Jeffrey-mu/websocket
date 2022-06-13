@@ -11,14 +11,13 @@
 <body>
     <script>
 
-        var ws = new WebSocket('ws://localhost:8080')
+        var ws = new WebSocket('ws://localhost:9700/test-ws')
 
         ws.onopen = function (mevt) {
             console.log('客户端已连接')
         }
         ws.onmessage = function (mevt) {
             console.log('客户端收到消息: ' + mevt.data)
-            // ws.close()
         }
         ws.onclose = function (mevt) {
             console.log('连接关闭')
